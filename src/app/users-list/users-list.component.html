@@ -1,0 +1,12 @@
+<h1>List</h1>
+
+<mat-divider></mat-divider>
+
+<mat-list class="list">
+  <mat-list-item *ngFor="let user of users">
+    <a mat-list-item [routerLink]="'/user/' + user._id.$oid" class="list__link">
+      <mat-icon mat-list-icon>account_circle</mat-icon>
+      {{ user.name }}
+    </a>
+  </mat-list-item>
+</mat-list>
